@@ -1,0 +1,118 @@
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir
+$ touch .gitignore
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir
+$ git init
+Initialized empty Git repository in C:/xampp/htdocs/dir/.git/
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ git add .
+ create mode 100644 salony.php
+ create mode 100644 sysday2.html
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ ^C
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ git remote add origin git@github.com:salonynhp/cwh.github.io.git
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ git push origin master
+The authenticity of host 'github.com (13.234.176.102)' can't be establish
+ed.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ git push orr
+fatal: 'orr' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ ssh-keygen -t ed25519 -C "salonynhp@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/salon/.ssh/id_ed25519):
+Created directory '/c/Users/salon/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/salon/.ssh/id_ed25519
+Your public key has been saved in /c/Users/salon/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:s9G7eoUIb2aeLyspNqE7gwZUmqsTuWO1NOO3PFjA0r0 salonynhp@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|   .             |
+|  * .            |
+| = + ..  .       |
+|..o . .oS...     |
+|+. =.E  *+...    |
+|o++.*. *....     |
+|*o++=oo + ..     |
+|oo.=.=o.o*o      |
++----[SHA256]-----+
+
+
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ cat /c/Users/salon/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINlsbpTsjWPNPtZQS+SEl5FCiuUCWHR04nUpwjEsnj31 salonynhp@gmail.com
+
+salon@DESKTOP-J63G5K2 MINGW64 /c/xampp/htdocs/dir (master)
+$ git push origin master
+The authenticity of host 'github.com (13.234.176.102)' can't be establish
+ed.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (18/18), 5.16 MiB | 359.00 KiB/s, done.
+Total 18 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:salonynhp/cwh.github.io.git
+ * [new branch]      master -> master
+
+
+-------------------------------------------------------
+
+touch .gitignore 	//exculde files
+git config --global user.name salonynhp
+git config --global user.email salonynhp@gmail.com
+
+git init		//initialise repo
+git add .	        // add files to staging area
+git commit -m "Initial commit" //commit ban gya
+git status 		// just for checking 
+
+//generate ssh key
+ssh-keygen -t ed25519 -C "salonynhp@gmail.com"
+tail<path to id_rsa.pub> //add this key to github
+git remote add origin <ssh url.git>
+git push origin master
